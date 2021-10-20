@@ -1,7 +1,8 @@
 <template>
   <div class="">
-    Home {{ res }}
-
+    Home
+    <!--============================= -->
+    <!-- Home {{ res }}
     <b-row>
       <b-col lg="4" class="pb-2"
         ><b-button size="sm">Small Button</b-button></b-col
@@ -11,7 +12,6 @@
         ><b-button size="lg">Large Button</b-button></b-col
       >
     </b-row>
-
     <social-sharing
       url="www.google.com"
       description="socialDescriptionTelegram"
@@ -28,14 +28,12 @@
         </a>
       </network>
     </social-sharing>
-
-    <!-- screen vue  -->
-
     <div>
       <p>Page width is {{ $screen.width }} px</p>
       <p>Page height is {{ $screen.height }} px</p>
       <p>Current breakpoint is {{ $screen.breakpoint }} px</p>
-    </div>
+    </div> -->
+    <!-- ============================== -->
   </div>
 </template>
 
@@ -43,11 +41,6 @@
 export default {
   head() {
     // Set Meta Tags for this Page
-  },
-  data() {
-    return {
-      screen: this.$screen.breakpoint != "xs" && this.$screen.breakpoint != "sm"
-    };
   },
   async asyncData({ $axios }) {
     const res = await $axios.$get(

@@ -2,15 +2,15 @@
   {
     "name": "news",
     "path": "/news",
-    "component": "D:\\\\project\\\\armaghan-git\\\\armaghan-web\\\\pages\\\\news\\\\index.vue",
+    "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\news\\\\index.vue",
     "chunkName": "pages/news/index",
-    "_name": "_4555ae5c"
+    "_name": "_c622598c"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\project\\\\armaghan-git\\\\armaghan-web\\\\pages\\\\index.vue",
+    "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_7a189145"
+    "_name": "_a187aca6"
   }
 ]
