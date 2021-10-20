@@ -1,0 +1,80 @@
+stages:
+  - build   # Build and run dockers
+  - test site
+
+build development docker:
+  stage: build
+  environment:
+    name: development
+  only:
+    - dev
+  tags:
+    - development
+  script:
+    - export COMMIT_TIME=$(date +"%d-%m-%y %H:%M")
+    - sed -i "s/%%COMMIT_ID%%/$CI_COMMIT_SHORT_SHA/" index.html
+    - sed -i "s/%%COMMIT_TITLE%%/$CI_COMMIT_TITLE/" index.html
+    - sed -i "s/%%COMMIT_TIME%%/$COMMIT_TIME/" index.html
+    - sed -i "s/none/block/" index.html
+    - sed -i "s#<link rel="canonical" href="%%WEBSITE_URL%%">##" index.html
+
+    - export NODE_ENV=development
+    - export HTTP_PORT=$HTTP_PORT
+    - export HTTPS_PORT=$HTTPS_PORT
+    - export SSL_CRT_FILE=dev.farabin.news.crt
+    - export SSL_KEY_FILE=dev.farabin.news.key
+    - docker-compose up --build -d
+  after_script:
+    - docker image prune -f
+
+build production docker:
+  stage: build
+  environment:
+    name: production
+  only:
+    - master
+  tags:
+    - production
+  script:
+    - export COMMIT_TIME=$(date +"%d-%m-%y %H:%M")
+    - sed -i "s/%%COMMIT_ID%%/$CI_COMMIT_SHORT_SHA/" index.html
+    - sed -i "s/%%COMMIT_TITLE%%/$CI_COMMIT_TITLE/" index.html
+    - sed -i "s/%%COMMIT_TIME%%/$COMMIT_TIME/" index.html
+    - sed -i "s#%%WEBSITE_URL%%#$WEBSITE_URL#" index.html
+
+    - export NODE_ENV=production
+    - export HTTP_PORT=$HTTP_PORT
+    - export HTTPS_PORT=$HTTPS_PORT
+    - export SSL_CRT_FILE=www.farabin.news.crt
+    - export SSL_KEY_FILE=www.farabin.news.key
+    - docker-compose up --build -d
+  after_script:
+    - docker image prune -f
+
+test development website:
+  stage: test site
+  environment:
+    name: development
+    url: $WEBSITE_URL
+  only:
+    - dev
+  tags:
+    - development
+  before_script:
+    - sudo apt-get install curl
+  script:
+    - curl -k -s $WEBSITE_URL | grep -q "$CI_COMMIT_SHORT_SHA"
+
+test production website:
+  stage: test site
+  environment:
+    name: production
+    url: $WEBSITE_URL
+  only:
+    - master
+  tags:
+    - production
+  before_script:
+    - sudo apt-get install curl
+  script:
+    - curl -k -s $WEBSITE_URL | grep -q "$CI_COMMIT_SHORT_SHA"

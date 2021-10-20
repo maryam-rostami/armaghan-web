@@ -1,0 +1,18 @@
+version: '3'
+services:
+  armaghan-web:
+    container_name: armaghan-web
+    restart: always
+    build: 
+      context: .
+      args: 
+        NODE_ENV: ${NODE_ENV}
+        SSL_CRT_FILE: ${SSL_CRT_FILE}
+        SSL_KEY_FILE: ${SSL_KEY_FILE}
+    ports:  
+     - ${HTTP_PORT}:80
+     - ${HTTPS_PORT}:443
+    volumes:
+      - /app/node_modules
+      - .:/app
+      #- /srv/armaghan-web/certs:/etc/nginx/certs

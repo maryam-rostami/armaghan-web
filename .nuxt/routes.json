@@ -1,0 +1,16 @@
+[
+  {
+    "name": "news",
+    "path": "/news",
+    "component": "D:\\\\project\\\\armaghan-git\\\\armaghan-web\\\\pages\\\\news\\\\index.vue",
+    "chunkName": "pages/news/index",
+    "_name": "_4555ae5c"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\project\\\\armaghan-git\\\\armaghan-web\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7a189145"
+  }
+]

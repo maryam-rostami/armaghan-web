@@ -1,0 +1,23 @@
+{
+  "name": "armaghan-web",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "Hamid Jalali <hamid.galali@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "docs": "vuese gen"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "vue-screen": "^1.5.3",
+    "vue-social-sharing": "^2.2.10"
+  },
+  "devDependencies": {}
+}

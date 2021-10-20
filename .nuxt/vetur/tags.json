@@ -1,0 +1,50 @@
+{
+  "NavigationArmaghanNavbar": {
+    "description": "Auto imported from components/navigation/ArmaghanNavbar.vue"
+  },
+  "NavigationArmaghanSidebar": {
+    "description": "Auto imported from components/navigation/ArmaghanSidebar.vue"
+  },
+  "NewsList": {
+    "description": "Auto imported from components/news/NewsList.vue"
+  },
+  "NewsSearch": {
+    "description": "Auto imported from components/news/Search.vue"
+  },
+  "UsersFavoritesFavorite": {
+    "description": "Auto imported from components/users/Favorites/Favorite.vue"
+  },
+  "UsersFavorites": {
+    "description": "Auto imported from components/users/Favorites/Favorites.vue"
+  },
+  "NewsArticleBrief": {
+    "description": "Auto imported from components/news/news-article-brief/NewsArticleBrief.vue"
+  },
+  "NewsArticleBriefBody": {
+    "description": "Auto imported from components/news/news-article-brief/NewsArticleBriefBody.vue"
+  },
+  "NewsArticleBriefFooter": {
+    "description": "Auto imported from components/news/news-article-brief/NewsArticleBriefFooter.vue"
+  },
+  "NewsArticleBriefHeader": {
+    "description": "Auto imported from components/news/news-article-brief/NewsArticleBriefHeader.vue"
+  },
+  "NewsArticaleDetailsHeader": {
+    "description": "Auto imported from components/news/news-article-details/NewsArticaleDetailsHeader.vue"
+  },
+  "NewsArticleDetails": {
+    "description": "Auto imported from components/news/news-article-details/NewsArticleDetails.vue"
+  },
+  "NewsArticleDetailsActionBar": {
+    "description": "Auto imported from components/news/news-article-details/NewsArticleDetailsActionBar.vue"
+  },
+  "NewsArticleDetailsBody": {
+    "description": "Auto imported from components/news/news-article-details/NewsArticleDetailsBody.vue"
+  },
+  "NewsArticleDetailsTag": {
+    "description": "Auto imported from components/news/news-article-details/NewsArticleDetailsTag.vue"
+  },
+  "NewsArticleDetailsUsing": {
+    "description": "Auto imported from components/news/news-article-details/NewsArticleDetailsUsing.vue"
+  }
+}
