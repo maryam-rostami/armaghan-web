@@ -76,6 +76,11 @@ export default {
       screenOrientation: ""
     };
   },
+
+  async asyncData({ $axios }) {
+    const res = await $axios.$get();
+  },
+
   computed: {
     ...mapGetters(["user"]),
     // componentProps() {
@@ -145,7 +150,7 @@ export default {
             this.$store.dispatch("getPublishers");
           });
       } else {
-        $axios
+        this.$axios
           .$post(process.env.ROOT_API + "/users/createUser")
           .then(response => {
             localStorage.userId = response.data.userId;
