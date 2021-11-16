@@ -27,9 +27,7 @@ export const actions = {
       .then(response => {
         commit("setCategories", response.data);
       })
-      .catch(e => {
-        console.log(e);
-      })
+      .catch(e => {})
       .finally(() => commit("finishLoading", "categories"));
   },
   getPublishers: ({ commit }) => {
@@ -39,9 +37,7 @@ export const actions = {
       .then(response => {
         commit("setPublishers", response.data.publishers);
       })
-      .catch(e => {
-        console.log(e);
-      })
+      .catch(e => {})
       .finally(() => commit("finishLoading", "publishers"));
   },
   getNews: ({ commit, getters }, { filterType, filter, page }) => {

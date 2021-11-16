@@ -77,9 +77,9 @@ export default {
     };
   },
 
-  async asyncData({ $axios }) {
-    const res = await $axios.$get();
-  },
+  // async asyncData() {
+  //   await this.loadData();
+  // },
 
   computed: {
     ...mapGetters(["user"]),
@@ -97,6 +97,9 @@ export default {
     },
     isInProduction() {
       return process.env.NODE_ENV == "production";
+    },
+    localStorage() {
+      return localStorage;
     },
     /*navbarHeight() {
       switch (this.$screen.breakpoint) {
@@ -131,6 +134,10 @@ export default {
         this.contentHeight -= this.$refs.devInfoHeader.clientHeight + 30; //  30 is hegight of last commit header
     }
   },
+  created() {
+    console.log("router", this.$router);
+    this.loadData();
+  },
   methods: {
     ...mapActions(["getUser"]),
     onResize(event) {
@@ -140,20 +147,13 @@ export default {
     onSidebarAction() {
       if (!this.showSidebarDefault) this.showSidebar = false;
     },
-    loadData() {
-      if (localStorage.userId) {
-        this.userId = localStorage.userId;
-        this.$store
-          .dispatch("getUser", { userId: this.userId })
+    async loadData() {
+      if (localStorage.userId === undefined) {
+        await this.$axios
+          .post(process.env.ROOT_API + "/users/createUser")
           .then(response => {
-            this.$store.dispatch("getCategories");
-            this.$store.dispatch("getPublishers");
-          });
-      } else {
-        this.$axios
-          .$post(process.env.ROOT_API + "/users/createUser")
-          .then(response => {
-            localStorage.userId = response.data.userId;
+            localStorage["userId"] = response.data.userId;
+
             this.userId = response.data.userId;
             this.$store
               .dispatch("getUser", { userId: this.userId })
@@ -162,8 +162,14 @@ export default {
                 this.$store.dispatch("getPublishers");
               });
           })
-          .catch(e => {
-            console.log(e);
+          .catch(e => {});
+      } else {
+        this.userId = localStorage.userId;
+        this.$store
+          .dispatch("getUser", { userId: this.userId })
+          .then(response => {
+            this.$store.dispatch("getCategories");
+            this.$store.dispatch("getPublishers");
           });
       }
     },
@@ -184,7 +190,7 @@ export default {
     window.removeEventListener("resize", this.onResize);
   },
   beforeMount() {
-    this.loadData();
+    // this.loadData();
   },
   mounted() {
     window.addEventListener("resize", this.onResize);

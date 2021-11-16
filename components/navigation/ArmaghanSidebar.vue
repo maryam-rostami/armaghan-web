@@ -74,6 +74,17 @@ import { mapGetters } from "vuex";
 export default {
   computed: {
     ...mapGetters(["allCategories"])
+    // router(context) {
+    //   return context.router;
+    // }
+  },
+  // async asyncData(context) {
+  //
+  //   const router = context.route;
+  //   return { router };
+  // },
+  created() {
+    //
   },
   methods: {
     onCategoryHover(categoryKey) {
@@ -96,13 +107,12 @@ export default {
     },
     selectCategory(categoryKey) {
       if (categoryKey == "all" || categoryKey == "my-news") {
-        this.$router
-          .push({
-            name: "news",
-            params: { showExtraColumn: false },
-            query: { filter: categoryKey }
-          })
-          .catch(() => {});
+        this.$router.push({
+          name: "news",
+          params: { showExtraColumn: false },
+          query: { filter: categoryKey }
+        });
+        // .catch(() => {});
         this.$emit("onSidebarAction");
       }
     },

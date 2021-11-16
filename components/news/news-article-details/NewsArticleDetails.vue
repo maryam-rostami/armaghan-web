@@ -48,7 +48,7 @@ export default {
     return {
       newsArticle: null,
       nextIsDisabled: true,
-      previousIsDisabled: true,
+      previousIsDisabled: true
     };
   },
   computed: {
@@ -56,9 +56,9 @@ export default {
       "allPublishers",
       "fontSize",
       "newsFilterType",
-      "newsFilter",
+      "newsFilter"
     ]),
-    newsArticleId(){
+    newsArticleId() {
       return this.$route.params.id;
     },
     categoryTitle() {
@@ -76,36 +76,36 @@ export default {
       return fuzzyPassedTime(this.newsArticle.publishDate);
     },
     publisherName() {
-      let publisher = this.allPublishers.find((publisher) => {
+      let publisher = this.allPublishers.find(publisher => {
         return publisher.key == this.newsArticle.publisher;
       });
       if (publisher) return publisher.name;
-    },
+    }
   },
   components: {
     ActionBar,
     NewsArticleHeader,
     NewsArticleBody,
     NewsArticleUsing,
-    NewsArticleDetailsTag,
+    NewsArticleDetailsTag
   },
   watch: {
-    newsArticleId: function (val){
+    newsArticleId: function(val) {
       this.load(val);
-    },
+    }
   },
   methods: {
-    load(newsArticleId){
+    load(newsArticleId) {
       this.$store
-      .dispatch("getNewsArticle", { newsArticleId })
-      .then((response) => {
-        this.newsArticle = response.data;
-        this.disablePreviousButton(this.newsArticle);
-        this.disableNextButton(this.newsArticle);
-      })
-      .catch((error) => console.log(error));
+        .dispatch("getNewsArticle", { newsArticleId })
+        .then(response => {
+          this.newsArticle = response.data;
+          this.disablePreviousButton(this.newsArticle);
+          this.disableNextButton(this.newsArticle);
+        })
+        .catch(error => console.log(error));
     },
-    disableNextButton(newsArticle){
+    disableNextButton(newsArticle) {
       if (newsArticle == undefined) {
         this.nextIsDisabled = true;
         return;
@@ -139,12 +139,12 @@ export default {
           .dispatch("getNews", {
             filterType: this.newsFilterType,
             filter: this.newsFilter,
-            page: "previous",
+            page: "previous"
           })
           .then(() => {
             this.previousIsDisabled = this.$store.getters.reachedFirstPage;
           })
-          .catch((e) => {
+          .catch(e => {
             console.log(e);
           });
       }
@@ -156,7 +156,7 @@ export default {
 
       this.$router.push({
         name: "newsArticle",
-        params: { id: nextArticleId},
+        params: { id: nextArticleId }
       });
     },
     previous() {
@@ -169,14 +169,14 @@ export default {
 
       this.$router.push({
         name: "newsArticle",
-        params: { id: previousArticleId},
+        params: { id: previousArticleId }
       });
-    },
+    }
   },
   mounted() {
     let id = this.$route.params.id;
     this.load(id);
-  },
+  }
 };
 </script>
 

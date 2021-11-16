@@ -43,9 +43,7 @@ export default {
       isScrolling: false
     };
   },
-  async asyncData({ route, params }) {
-    console.log("component::::::::", route);
-  },
+  async asyncData({ route, params }) {},
   computed: {
     ...mapGetters([
       "news",
@@ -102,9 +100,7 @@ export default {
 
       this.$store
         .dispatch("getNews", { filterType, filter, page })
-        .catch(e => {
-          console.log(e);
-        })
+        .catch(e => {})
         .finally(() => {
           this.isRefreshing = false;
         });

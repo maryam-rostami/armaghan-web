@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {}
+      env: {"NODE_ENV":"development","HTTP_PORT":"80","HTTPS_PORT":"443","ROOT_API":"https://dev-api.farabin.news:3001/api"}
     }
     // Only set once
 

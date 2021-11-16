@@ -6,9 +6,7 @@
 import NewsList from "../../components/news/NewsList.vue";
 export default {
   components: { NewsList },
-  async asyncData({ route, params }) {
-    console.log("looooooog", route);
-  }
+  async asyncData(context) {}
 };
 </script>
 

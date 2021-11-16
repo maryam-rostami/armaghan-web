@@ -1,21 +1,29 @@
 export default {
   server: {
-    port: 3005,
+    port: 3005
+  },
+  env: {
+    NODE_ENV: process.env.NODE_ENV,
+    HTTP_PORT: process.env.HTTP_PORT,
+    HTTPS_PORT: process.env.HTTPS_PORT,
+    ROOT_API: process.env.ROOT_API
   },
   publicRuntimeConfig: {
-    axios: {},
+    baseUrl: process.env.ROOT_API,
+    axios: {}
   },
+  privateRuntimeConfig: {},
   head: {
     title: "nuxt-app",
     htmlAttrs: {
-      lang: "en",
+      lang: "en"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
-    ],
+      { name: "format-detection", content: "telephone=no" }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -25,7 +33,7 @@ export default {
   plugins: [
     "@/plugins/bootstrap-vue",
     "@/plugins/vue-social-sharing",
-    "@/plugins/vue-screen",
+    "@/plugins/vue-screen"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -38,5 +46,5 @@ export default {
   modules: ["@nuxtjs/axios"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 };

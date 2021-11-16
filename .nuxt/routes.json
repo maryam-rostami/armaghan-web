@@ -7,6 +7,13 @@
     "_name": "_c622598c"
   },
   {
+    "name": "news-article",
+    "path": "/news/article",
+    "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\news\\\\article\\\\index.vue",
+    "chunkName": "pages/news/article/index",
+    "_name": "_12124538"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\index.vue",
