@@ -2,22 +2,19 @@
   {
     "name": "news",
     "path": "/news",
-    "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\news\\\\index.vue",
-    "chunkName": "pages/news/index",
-    "_name": "_c622598c"
+    "component": "C:\\\\Me\\\\Project\\\\armaghan-web-nuxt\\\\pages\\\\news\\\\index.vue",
+    "chunkName": "pages/news/index"
   },
   {
-    "name": "news-article",
-    "path": "/news/article",
-    "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\news\\\\article\\\\index.vue",
-    "chunkName": "pages/news/article/index",
-    "_name": "_12124538"
+    "name": "news-article-id",
+    "path": "/news/article/:id?",
+    "component": "C:\\\\Me\\\\Project\\\\armaghan-web-nuxt\\\\pages\\\\news\\\\article\\\\_id.vue",
+    "chunkName": "pages/news/article/_id"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\project\\\\armaghan-web\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_a187aca6"
+    "component": "C:\\\\Me\\\\Project\\\\armaghan-web-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]

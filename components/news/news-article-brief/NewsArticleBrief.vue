@@ -30,9 +30,10 @@ export default {
   methods: {
     openNewsArticleDetails() {
       this.$router.push({
-        name: "newsArticle",
+        name: "news-article-id",
         params: { id: this.newsArticle._id },
       });
+      console.log("router::::::::", this.$router)
     },
   },
   computed: {

@@ -155,7 +155,7 @@ export default {
       );
 
       this.$router.push({
-        name: "newsArticle",
+         name: "news-article-id",
         params: { id: nextArticleId }
       });
     },
@@ -168,7 +168,8 @@ export default {
         return;
 
       this.$router.push({
-        name: "newsArticle",
+               name: "news-article-id",
+
         params: { id: previousArticleId }
       });
     }

@@ -1,6 +1,5 @@
 <template>
-  <!-- <news-article-details /> -->
-  <p>article</p>
+  <news-article-details />
 </template>
 
 <script>
@@ -9,7 +8,7 @@ export default {
   components: { NewsArticleDetails },
   async asyncData(context) {},
   created() {
-    console.log("route of page", this.$routet.options);
+    console.log("details");
   }
 };
 </script>

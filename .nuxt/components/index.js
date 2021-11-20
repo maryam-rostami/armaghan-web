@@ -2,8 +2,6 @@ export { default as NavigationArmaghanNavbar } from '../..\\components\\navigati
 export { default as NavigationArmaghanSidebar } from '../..\\components\\navigation\\ArmaghanSidebar.vue'
 export { default as NewsList } from '../..\\components\\news\\NewsList.vue'
 export { default as NewsSearch } from '../..\\components\\news\\Search.vue'
-export { default as UsersFavoritesFavorite } from '../..\\components\\users\\Favorites\\Favorite.vue'
-export { default as UsersFavorites } from '../..\\components\\users\\Favorites\\Favorites.vue'
 export { default as NewsArticleBrief } from '../..\\components\\news\\news-article-brief\\NewsArticleBrief.vue'
 export { default as NewsArticleBriefBody } from '../..\\components\\news\\news-article-brief\\NewsArticleBriefBody.vue'
 export { default as NewsArticleBriefFooter } from '../..\\components\\news\\news-article-brief\\NewsArticleBriefFooter.vue'
@@ -14,6 +12,8 @@ export { default as NewsArticleDetailsActionBar } from '../..\\components\\news\
 export { default as NewsArticleDetailsBody } from '../..\\components\\news\\news-article-details\\NewsArticleDetailsBody.vue'
 export { default as NewsArticleDetailsTag } from '../..\\components\\news\\news-article-details\\NewsArticleDetailsTag.vue'
 export { default as NewsArticleDetailsUsing } from '../..\\components\\news\\news-article-details\\NewsArticleDetailsUsing.vue'
+export { default as UsersFavoritesFavorite } from '../..\\components\\users\\Favorites\\Favorite.vue'
+export { default as UsersFavorites } from '../..\\components\\users\\Favorites\\Favorites.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

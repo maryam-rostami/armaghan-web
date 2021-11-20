@@ -11,12 +11,6 @@
   "NewsSearch": {
     "description": "Auto imported from components/news/Search.vue"
   },
-  "UsersFavoritesFavorite": {
-    "description": "Auto imported from components/users/Favorites/Favorite.vue"
-  },
-  "UsersFavorites": {
-    "description": "Auto imported from components/users/Favorites/Favorites.vue"
-  },
   "NewsArticleBrief": {
     "description": "Auto imported from components/news/news-article-brief/NewsArticleBrief.vue"
   },
@@ -46,5 +40,11 @@
   },
   "NewsArticleDetailsUsing": {
     "description": "Auto imported from components/news/news-article-details/NewsArticleDetailsUsing.vue"
+  },
+  "UsersFavoritesFavorite": {
+    "description": "Auto imported from components/users/Favorites/Favorite.vue"
+  },
+  "UsersFavorites": {
+    "description": "Auto imported from components/users/Favorites/Favorites.vue"
   }
 }
