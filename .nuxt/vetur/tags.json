@@ -1,15 +1,15 @@
 {
-  "NavigationArmaghanNavbar": {
-    "description": "Auto imported from components/navigation/ArmaghanNavbar.vue"
-  },
-  "NavigationArmaghanSidebar": {
-    "description": "Auto imported from components/navigation/ArmaghanSidebar.vue"
-  },
   "NewsList": {
     "description": "Auto imported from components/news/NewsList.vue"
   },
   "NewsSearch": {
     "description": "Auto imported from components/news/Search.vue"
+  },
+  "NavigationArmaghanNavbar": {
+    "description": "Auto imported from components/navigation/ArmaghanNavbar.vue"
+  },
+  "NavigationArmaghanSidebar": {
+    "description": "Auto imported from components/navigation/ArmaghanSidebar.vue"
   },
   "NewsArticleBrief": {
     "description": "Auto imported from components/news/news-article-brief/NewsArticleBrief.vue"

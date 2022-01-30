@@ -4,7 +4,7 @@
       <b-col cols="4" lg="5" class="sidebar-button-col">
         <b-nav class="nav">
           <b-button class="sidebar-button" @click="$emit('onToggleSidebar')">
-            <b-icon icon="list"></b-icon>
+            <b-icon icon="list">☰</b-icon>
           </b-button>
 
           <b-nav-item @click="$emit('onSearch')">

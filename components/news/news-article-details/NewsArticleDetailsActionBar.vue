@@ -96,7 +96,7 @@ export default {
 
 <style scoped>
 .action-bar {
-  background-color: transparent;
+  background-color: #fff;
   margin: 0;
 }
 

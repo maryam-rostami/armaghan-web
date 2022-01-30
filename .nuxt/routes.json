@@ -3,18 +3,21 @@
     "name": "news",
     "path": "/news",
     "component": "C:\\\\Me\\\\Project\\\\armaghan-web-nuxt\\\\pages\\\\news\\\\index.vue",
-    "chunkName": "pages/news/index"
+    "chunkName": "pages/news/index",
+    "_name": "_208387f5"
   },
   {
     "name": "news-article-id",
     "path": "/news/article/:id?",
     "component": "C:\\\\Me\\\\Project\\\\armaghan-web-nuxt\\\\pages\\\\news\\\\article\\\\_id.vue",
-    "chunkName": "pages/news/article/_id"
+    "chunkName": "pages/news/article/_id",
+    "_name": "_c0cd089e"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Me\\\\Project\\\\armaghan-web-nuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_5ab9c6a8"
   }
 ]

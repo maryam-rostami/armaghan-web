@@ -6,10 +6,10 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
-- `<NavigationArmaghanNavbar>` | `<navigation-armaghan-navbar>` (components/navigation/ArmaghanNavbar.vue)
-- `<NavigationArmaghanSidebar>` | `<navigation-armaghan-sidebar>` (components/navigation/ArmaghanSidebar.vue)
 - `<NewsList>` | `<news-list>` (components/news/NewsList.vue)
 - `<NewsSearch>` | `<news-search>` (components/news/Search.vue)
+- `<NavigationArmaghanNavbar>` | `<navigation-armaghan-navbar>` (components/navigation/ArmaghanNavbar.vue)
+- `<NavigationArmaghanSidebar>` | `<navigation-armaghan-sidebar>` (components/navigation/ArmaghanSidebar.vue)
 - `<NewsArticleBrief>` | `<news-article-brief>` (components/news/news-article-brief/NewsArticleBrief.vue)
 - `<NewsArticleBriefBody>` | `<news-article-brief-body>` (components/news/news-article-brief/NewsArticleBriefBody.vue)
 - `<NewsArticleBriefFooter>` | `<news-article-brief-footer>` (components/news/news-article-brief/NewsArticleBriefFooter.vue)
